@@ -25,6 +25,7 @@ const startquestion = (text) =>
       if (answer == 1) resolve(1);
       if (answer == 2) resolve(2);
       if (answer == 3) resolve(3);
+      if (answer != 1 || answer != 2 || answer != 3) reject (console.log('Выберите от 1 до 3'));
     })
   );
 
