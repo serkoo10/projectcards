@@ -1,7 +1,9 @@
 class Model {
   constructor() {
+console.log('kyky');
+console.log('kyky');
 
   }
 }
 
-module.exports = Model
+module.exports = Modelgit
