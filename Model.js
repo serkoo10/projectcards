@@ -6,4 +6,4 @@ console.log(rtr);
 }
 }
 
-module.exports = Model
+module.exports = Modelgit
