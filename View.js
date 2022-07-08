@@ -2,6 +2,7 @@ const readline = require("readline");
 const { stdin: input, stdout: output } = require("process");
 const taskInterface = readline.createInterface({ input, output });
 const fs = require("fs");
+const { log } = require("console");
 
 let i = 0;
 let j = 0;
@@ -51,7 +52,7 @@ class View {
 
   answer() {
     startquestion(
-      "Выберете  номер темы:\n 1.Тупые вопросы получше \n 2.Тупые вопросы похуже \n 3.Тупые вопросы еще хуже\n"
+      "Выберете  номер темы:\n 1.Тупые вопросы \n 2.Тупые вопросы похуже \n 3.Тупые вопросы еще хуже\n"
     )
       .then((m) => info(m))
       .then((arr) => {
@@ -87,14 +88,17 @@ class View {
       .then(() => {
         if (j == 5) {
           console.log(`Ваши баллы: ${j}`);
+          console.log('\r\n _     ___   _         _       _   _     \r\n\\ \\_\/ \/ \/ \\ | | |     \\ \\    \/| | | |\\ | \r\n |_|  \\_\\_\/ \\_\\_\/      \\_\\\/\\\/ |_| |_| \\| \r\n')
           return;
         }
         if (j < 5 && j > 2) {
           console.log(`Ваши баллы: ${j}`);
+          console.log('\r\n _     ___   _         _     ___   ___   __   ____ \r\n\\ \\_\/ \/ \/ \\ | | |     | |   \/ \/ \\ \/ \/ \\ ( (` | |_  \r\n |_|  \\_\\_\/ \\_\\_\/     |_|__ \\_\\_\/ \\_\\_\/ _)_) |_|__ \r\n')
           return;
         }
         if (j < 2) {
           console.log(`Ваши баллы: ${j}`);
+          console.log('\r\n _     ___   _         _     ___   ___   __   ____ \r\n\\ \\_\/ \/ \/ \\ | | |     | |   \/ \/ \\ \/ \/ \\ ( (` | |_  \r\n |_|  \\_\\_\/ \\_\\_\/     |_|__ \\_\\_\/ \\_\\_\/ _)_) |_|__ \r\n')
           return;
         }
       })
