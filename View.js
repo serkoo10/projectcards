@@ -5,3 +5,5 @@ class View {
 }
 
 module.exports = View
+
+console.log('123');
